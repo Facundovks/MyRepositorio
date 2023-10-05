@@ -1,0 +1,42 @@
+.titulo1{
+
+    text-align: center;
+    color: rgb(38, 131, 246);
+}
+body{
+
+    background-color: rgb(180, 246, 224);
+
+}
+.div1{
+
+align-items: center;
+margin-left:430px;
+
+}
+.tabla{
+    margin-top: 80px;
+    margin-left: 240px;
+  
+}
+img{
+
+border-radius: 20px;
+padding: 10px;
+
+
+}
+.titulo2{
+margin-left: 180px;
+color: chocolate;
+
+}
+.btn1{
+    margin-left: 270px;
+    border-radius: 10px;
+}
+.p1{
+
+    color: chocolate;
+
+}

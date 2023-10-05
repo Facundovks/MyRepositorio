@@ -1,6 +1,6 @@
 let classifier;
-let imageModelURL = 'Tu_modelo'; // URL del modelo de Teachable Machine
-let video, flippedVideo;
+let imageModelURL = 'https://teachablemachine.withgoogle.com/models/m_d7FmWwD/'; // URL del modelo de Teachable Machine
+let image;
 let label = "";
 
 function preload() {
@@ -9,16 +9,14 @@ function preload() {
 
 function setup() {
   createCanvas(320, 260); // Crea un canvas de 320x260 píxeles
-  video = createCapture(VIDEO); // Captura el video de la cámara
-  video.size(320, 240); // Establece el tamaño del video
-  video.hide(); // Oculta el video original
-  flippedVideo = ml5.flipImage(video); // Invierte el video horizontalmente
+  image = createCapture(image); // Captura el video de la cámara
+  image.size(320, 240); // Establece el tamaño del video
+  image.hide(); // Oculta el video original
   classifyVideo(); // Clasifica el video
 }
 
 function draw() {
   background(0); // Establece el fondo negro
-  image(flippedVideo, 0, 0); // Muestra el video invertido
   fill(255); // Establece el color de relleno blanco
   textSize(16); // Establece el tamaño de la fuente
   textAlign(CENTER); // Establece la alineación del texto al centro
@@ -33,7 +31,6 @@ function draw() {
 }
 
 function classifyVideo() {
-  flippedVideo = ml5.flipImage(video) // Invierte el video horizontalmente
   classifier.classify(flippedVideo, gotResult); // Clasifica el video y llama a la función gotResult cuando se obtienen los resultados
   flippedVideo.remove(); // Elimina el video invertido
 }
